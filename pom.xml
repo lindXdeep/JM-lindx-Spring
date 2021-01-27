@@ -15,69 +15,69 @@
     </properties>
 
     <build>
-    
+
         <sourceDirectory>${basedir}/src/main/java</sourceDirectory>
         <outputDirectory>${basedir}/out</outputDirectory>
         <finalName>${project.name}</finalName>
-    
+
         <plugins>
-    
-           <plugin>
-               <groupId>org.apache.maven.plugins</groupId>
-               <artifactId>maven-compiler-plugin</artifactId>
-               <version>3.8.1</version>
-               <configuration>
-                   <verbose>true</verbose>
-                   <source>${maven.compiler.source}</source>
-                   <target>${maven.compiler.target}</target>
-                   <executable>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+                <configuration>
+                    <verbose>true</verbose>
+                    <source>${maven.compiler.source}</source>
+                    <target>${maven.compiler.target}</target>
+                    <executable>
                        JAVA_HOME/bin/javac
                    </executable>
-               </configuration>
-           </plugin>
-    
-           <plugin>
-               <groupId>org.codehaus.mojo</groupId>
-               <artifactId>exec-maven-plugin</artifactId>
-               <version>1.2.1</version>
-               <executions>
-                   <execution>
-                       <phase>compile</phase>
-                       <goals>
-                           <goal>java</goal>
-                       </goals>
-                       <configuration>
-                           <mainClass>${main.class}</mainClass>
-                       </configuration>
-                   </execution>
-               </executions>
-           </plugin>
-    
-           <plugin>
-               <artifactId>maven-assembly-plugin</artifactId>
-               <version>3.3.0</version>
-               <executions>
-                   <execution>
-                       <phase>package</phase>
-                       <goals>
-                           <goal>single</goal>
-                       </goals>
-                   </execution>
-               </executions>
-               <configuration>
-                   <descriptorRefs>
-                       <descriptorRef>jar-with-dependencies</descriptorRef>
-                   </descriptorRefs>
-           
-                   <archive>
-                       <manifest>
-                           <mainClass>${main.class}</mainClass>
-                       </manifest>
-                   </archive>
-           
-               </configuration>
-           </plugin>
-    
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>1.2.1</version>
+                <executions>
+                    <execution>
+                        <phase>compile</phase>
+                        <goals>
+                            <goal>java</goal>
+                        </goals>
+                        <configuration>
+                            <mainClass>${main.class}</mainClass>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <version>3.3.0</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <descriptorRefs>
+                        <descriptorRef>jar-with-dependencies</descriptorRef>
+                    </descriptorRefs>
+
+                    <archive>
+                        <manifest>
+                            <mainClass>${main.class}</mainClass>
+                        </manifest>
+                    </archive>
+
+                </configuration>
+            </plugin>
+
         </plugins>
     </build>
 
@@ -103,6 +103,14 @@
             <version>5.3.3</version>
             <scope>test</scope>
         </dependency>
+
+         <!-- https://mvnrepository.com/artifact/javax.annotation/javax.annotation-api -->
+        <dependency>
+            <groupId>javax.annotation</groupId>
+            <artifactId>javax.annotation-api</artifactId>
+            <version>1.3.2</version>
+        </dependency>
+
 
         <!-- https://mvnrepository.com/artifact/org.scalatestplus/junit-4-12 -->
         <dependency>
