@@ -1,9 +1,25 @@
 {
-    "files.exclude": {
-        "**/.classpath": false,
-        "**/.project": false,
-        "**/.settings": false,
-        "**/.factorypath": false
-    },
-    "java.configuration.updateBuildConfiguration": "interactive"
+  "files.exclude": {
+    "**/.classpath": false,
+    "**/.project": false,
+    "**/.settings": false,
+    "**/.factorypath": false,
+    "**/.dccache": false,
+    "README.md": false,
+  },
+
+  "java.home": "/home/lindx/dev-libs/java/jdk-15.0.2",
+  "java.project.exportJar.targetPath": "${workspaceFolder}/App.jar",
+  "java.project.referencedLibraries": [
+    "lib/*.jar",
+    "lib/**/*.jar"
+  ],
+
+  //если нет сборщика
+  "java.project.sourcePaths": [
+    "src/main/java"
+  ],
+
+  "workspaceCacheClean.silent": false,
+  "workspaceCacheClean.autoReload": false,
 }
