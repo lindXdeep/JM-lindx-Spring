@@ -1,7 +1,7 @@
 /**
- * Task 01
+ * Task 02
  */
-public class Task001 {
+public class Task002 {
 
   private static int SIZE = 6;
 
@@ -9,7 +9,7 @@ public class Task001 {
 
     for (int i = 0; i < SIZE; i++) {
       for (int j = 0; j < SIZE; j++) {
-        System.out.printf("%s ", '*');
+        System.out.printf("%s ", (j < 3) ? '*' : '0');
       }
       System.out.println();
     }
